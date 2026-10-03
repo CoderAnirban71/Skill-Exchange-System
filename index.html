@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swap what you know | SkillBarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 32 20" width="32" height="20" aria-hidden="true">
+        <circle cx="10" cy="10" r="9" fill="var(--gold)"/>
+        <circle cx="22" cy="10" r="9" fill="var(--teal)" fill-opacity=".9"/>
+      </svg>
+      <span>SkillBarter</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="login.html">Log in</a>
+      <a class="btn btn-small" href="register.html">Create account</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="flash"></div>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Teach what you know. Learn what you don't.</h1>
+      <p class="lede">Aarav can teach Python and wants to learn Photoshop. Meera is the opposite. SkillBarter puts students like them together, so both walk away with a new skill and nobody pays a fee.</p>
+      <div class="actions">
+        <a class="btn" href="register.html">Create account</a>
+        <a class="btn btn-ghost" href="login.html">Log in</a>
+      </div>
+    </div>
+
+    <div class="hero-demo" aria-label="Example swap between two students">
+      <p class="demo-who">Aarav and Meera</p>
+      <div class="swap-card">
+        <div class="swap-side swap-learn">
+          <span class="swap-title">Aarav learns</span>
+          <span class="swap-skill">Photoshop</span>
+        </div>
+        <div class="swap-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg>
+        </div>
+        <div class="swap-side swap-teach">
+          <span class="swap-title">Aarav teaches</span>
+          <span class="swap-skill">Python</span>
+        </div>
+      </div>
+      <p class="demo-note">Both sides get something. That is the whole idea.</p>
+    </div>
+  </section>
+
+  <section class="steps">
+    <h2>How it works</h2>
+    <ol>
+      <li><strong>Add your skills.</strong> List what you can teach and what you want to learn.</li>
+      <li><strong>Find a match.</strong> Search for students whose list fits yours. Mutual matches show up first.</li>
+      <li><strong>Send a request.</strong> Pick one skill to teach and one to learn. When they accept, you both see each other's email.</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <p>Made for students who learn better together.
+    <button type="button" class="linklike" id="reset-demo">Reset demo data</button>
+  </p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+  // Already logged in? Go straight to the dashboard.
+  SB.ready.then(() => { if (!SB.redirectIfLoggedIn()) SB.showFlashes(); });
+</script>
+</body>
+</html>
