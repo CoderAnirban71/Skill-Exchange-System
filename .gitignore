@@ -1,0 +1,21 @@
+# Environments (Secret Data)
+.env
+.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python bytecode (Compiled files)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Virtual Environments (अगर आप भविष्य में बनाएं)
+venv/
+.venv/
+env/
